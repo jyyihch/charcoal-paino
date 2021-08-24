@@ -1,6 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    music.playTone(frequency[Math.abs(pins.analogReadPin(AnalogPin.P1) / 128)], music.beat(BeatFraction.Whole))
-    basic.showNumber(Math.abs(pins.analogReadPin(AnalogPin.P1) / 128))
+    music.playTone(frequency[Math.abs(pins.analogReadPin(AnalogPin.P1) / 128)], music.beat(BeatFraction.Half))
 })
 let frequency: number[] = []
 frequency = [
@@ -13,7 +12,6 @@ frequency = [
 494,
 523
 ]
-music.setBuiltInSpeakerEnabled(true)
 basic.forever(function () {
 	
 })
